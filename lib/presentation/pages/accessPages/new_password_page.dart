@@ -23,8 +23,7 @@ class NewPasswordPage extends StatelessWidget {
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is AuthenticationError) {
-          Fluttertoast.showToast(
-              msg: state.message, backgroundColor: MyColors.orange);
+         showErrorMsg(state.message);
         } else if (state is PasswordReset) {
           CachManager.setString('token', state.data['data']['access_token']);
           CachManager.setString(
@@ -85,9 +84,7 @@ class NewPasswordPage extends StatelessWidget {
                     authCubit.setNewPassword(emailController.text,
                         pinCodeController.text, newPasswordController.text);
                   } else {
-                    Fluttertoast.showToast(
-                        msg: 'Passwords do not match',
-                        backgroundColor: MyColors.orange);
+                    showErrorMsg('Passwords do not match');
                   }
                 },
               )

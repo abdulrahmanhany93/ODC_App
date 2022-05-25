@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
 import 'package:odc_app/presentation/widgets/main_widgets/my_form.dart';
 import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
@@ -30,8 +29,7 @@ class LogInPage extends StatelessWidget {
                   'refreshToken', state.data['data']['refresh_token'])
               .then((value) => Navigator.pushNamed(context, navigationCenter));
         } else if (state is AuthenticationError) {
-          Fluttertoast.showToast(
-              msg: state.message, backgroundColor: MyColors.orange);
+          showErrorMsg(state.message);
         }
       },
       child: Scaffold(

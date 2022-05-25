@@ -26,8 +26,7 @@ class VerifyEmailPage extends StatelessWidget {
         if (state is OtpVerified) {
           Navigator.pushNamed(context, newPasswordPage);
         } else if (state is AuthenticationError) {
-          Fluttertoast.showToast(
-              msg: state.message, backgroundColor: MyColors.orange);
+          showErrorMsg(state.message);
         }
       },
       child: Scaffold(

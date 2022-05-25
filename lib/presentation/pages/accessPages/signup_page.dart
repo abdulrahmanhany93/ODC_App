@@ -94,8 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
         if (state is SignUpSuccess) {
           Navigator.pushReplacementNamed(context, logInPage);
         } else if (state is AuthenticationError) {
-          Fluttertoast.showToast(
-              msg: state.message, backgroundColor: MyColors.orange);
+          showErrorMsg(state.message);
         }
       },
       child: MyButton(
