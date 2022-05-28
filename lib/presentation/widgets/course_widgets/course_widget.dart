@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
-import '../../../data/models/course_model.dart';
+import 'package:odc_app/data/models/courses_model.dart';
+import '../main_widgets/my_text.dart';
 import '../../consts/colors.dart';
 
 import 'package:sizer/sizer.dart';
@@ -11,7 +11,7 @@ class CourseWidget extends StatelessWidget {
     Key? key,
     required this.courseModel,
   }) : super(key: key);
-  final CourseModel courseModel;
+  final CoursesModel courseModel;
   @override
   Widget build(BuildContext context) {
     return Column(

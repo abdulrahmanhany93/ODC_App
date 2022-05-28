@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:odc_app/presentation/consts/api_methods.dart';
+import '../../presentation/consts/api_methods.dart';
 
 class ExamWebServices {
   Future<dynamic> getExam(String examCode, String token) async {

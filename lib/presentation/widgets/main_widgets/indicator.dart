@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+
 import '../../consts/colors.dart';
 import '../../consts/fixed_variables.dart';
-import 'package:sizer/sizer.dart';
 
 class Indicator extends StatelessWidget {
   const Indicator({

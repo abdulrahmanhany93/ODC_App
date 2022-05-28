@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/consts/colors.dart';
-import 'package:odc_app/presentation/consts/strings.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import '../../consts/colors.dart';
+import '../../consts/strings.dart';
+import 'my_text.dart';
 import 'package:sizer/sizer.dart';
 
 class AchievementCard extends StatelessWidget {

@@ -1,8 +1,9 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../consts/colors.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../consts/colors.dart';
 
 class TimerWidget extends StatelessWidget {
   const TimerWidget({

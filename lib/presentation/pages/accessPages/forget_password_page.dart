@@ -6,9 +6,9 @@ import '../../consts/cubites.dart';
 import '../../consts/routes.dart';
 import '../../widgets/main_widgets/my_button.dart';
 import '../../widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_form.dart';
+import '../../widgets/main_widgets/my_button.dart';
+import '../../widgets/main_widgets/my_text.dart';
+import '../../widgets/main_widgets/my_form.dart';
 import '../../consts/controllers.dart';
 import '../../consts/strings.dart';
 

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_form.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import 'package:odc_app/main.dart';
+import '../../widgets/main_widgets/my_button.dart';
+import '../../widgets/main_widgets/my_form.dart';
+import '../../widgets/main_widgets/my_text.dart';
 import '../../../bussiness_logic/authentication/auth_cubit.dart';
-import '../../../helpers/util/shared_pref.dart';
+import '../../../helpers/util/cach_manager.dart';
 import '../../consts/colors.dart';
 import '../../consts/controllers.dart';
 import '../../consts/cubites.dart';
@@ -23,11 +24,7 @@ class LogInPage extends StatelessWidget {
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) async {
         if (state is LogInAuthenticated) {
-          await CachManager.setString(
-              'token', state.data['data']['access_token']);
-          await CachManager.setString(
-                  'refreshToken', state.data['data']['refresh_token'])
-              .then((value) => Navigator.pushNamed(context, navigationCenter));
+          await assignTokenToCache(state, context);
         } else if (state is AuthenticationError) {
           showErrorMsg(state.message);
         }
@@ -84,6 +81,15 @@ class LogInPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> assignTokenToCache(
+      LogInAuthenticated state, BuildContext context) async {
+    userToken = state.data['data']['access_token'];
+    userRefreshToken = state.data['data']['refresh_token'];
+    await CachManager.setString('token', userToken.toString());
+    await CachManager.setString('refreshToken', userRefreshToken.toString())
+        .then((value) => Navigator.pushNamed(context, navigationCenter));
   }
 
   MyButton buildLogInButton() {

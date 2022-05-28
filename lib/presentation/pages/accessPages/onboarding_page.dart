@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/consts/fixed_variables.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/indicator.dart';
+import '../../consts/fixed_variables.dart';
+import '../../widgets/main_widgets/indicator.dart';
 import '../../consts/colors.dart';
 import '../../consts/routes.dart';
 import '../../widgets/main_widgets/my_button.dart';
 import '../../widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import '../../widgets/main_widgets/my_button.dart';
+import '../../widgets/main_widgets/my_text.dart';
 import '../../consts/strings.dart';
 
 import 'package:sizer/sizer.dart';

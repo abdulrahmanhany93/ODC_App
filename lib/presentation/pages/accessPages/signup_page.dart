@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/signup_forms.dart';
+import '../../widgets/main_widgets/signup_forms.dart';
 import '../../../bussiness_logic/authentication/auth_cubit.dart';
 import '../../../data/models/register_model.dart';
 import '../../consts/colors.dart';
@@ -11,8 +10,6 @@ import '../../consts/routes.dart';
 import '../../widgets/main_widgets/my_button.dart';
 import '../../widgets/main_widgets/my_check_box_title.dart';
 import '../../widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
 
 import 'package:sizer/sizer.dart';
 

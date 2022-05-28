@@ -1,8 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:odc_app/helpers/util/dio_helper.dart';
+import 'package:odc_app/helpers/util/cach_manager.dart';
+import '../../helpers/util/dio_helper.dart';
 
 class ApiHelper {
-  static Future<Response<dynamic>> enrollInCourse(int courseId, String token) {
+  static Future<Response<dynamic>> enrollInCourse(int courseId) {
+    final token = CachManager.getString('token');
     return DioHelper.post('courses/$courseId/enroll', headers: {
       'Accept': 'application/json',
       'Authorization': 'Bearer $token'
@@ -12,7 +14,8 @@ class ApiHelper {
   }
 
   static Future<Response<dynamic>> examSubmitRequest(
-      int examCode, String token, List<String> answers) async {
+      int examCode, List<String> answers) async {
+    final token = CachManager.getString('token');
     return DioHelper.post('exams/$examCode/submit', body: {
       'answers': answers
     }, headers: {
@@ -49,6 +52,13 @@ class ApiHelper {
     });
 
     /// method to get exam
+  }
+
+  static Future<Response<dynamic>> logOut(String token) {
+    return DioHelper.post('logout', headers: {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer $token'
+    });
   }
 
   static Future<Response<dynamic>> getUserRequest(String token) {

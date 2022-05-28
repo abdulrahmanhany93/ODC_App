@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_form.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import '../../widgets/main_widgets/my_button.dart';
+import '../../widgets/main_widgets/my_form.dart';
+import '../../widgets/main_widgets/my_text.dart';
 import '../../../bussiness_logic/authentication/auth_cubit.dart';
-import '../../../helpers/util/shared_pref.dart';
+import '../../../helpers/util/cach_manager.dart';
 import '../../consts/colors.dart';
 import '../../consts/controllers.dart';
 import '../../consts/cubites.dart';
@@ -23,7 +22,7 @@ class NewPasswordPage extends StatelessWidget {
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is AuthenticationError) {
-         showErrorMsg(state.message);
+          showErrorMsg(state.message);
         } else if (state is PasswordReset) {
           CachManager.setString('token', state.data['data']['access_token']);
           CachManager.setString(

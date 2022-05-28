@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../consts/methods.dart';
 import '../../widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
 
 import 'package:sizer/sizer.dart';
 

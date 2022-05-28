@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+
 import '../../../../data/models/category_model.dart';
 import '../../../consts/methods.dart';
 import '../../../widgets/category_widgets/category_widget.dart';
-import 'package:sizer/sizer.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({Key? key, required this.categories}) : super(key: key);

@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+
 import '../../helpers/util/dio_helper.dart';
 
 part 'auth_state.dart';

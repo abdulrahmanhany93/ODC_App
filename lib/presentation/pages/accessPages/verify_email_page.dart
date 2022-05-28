@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/pin_code_widget.dart';
+import '../../widgets/main_widgets/pin_code_widget.dart';
 import '../../../bussiness_logic/authentication/auth_cubit.dart';
 import '../../consts/colors.dart';
 import '../../consts/cubites.dart';
@@ -9,8 +8,6 @@ import '../../consts/methods.dart';
 import '../../consts/routes.dart';
 import '../../widgets/main_widgets/my_button.dart';
 import '../../widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
 import '../../consts/controllers.dart';
 import '../../consts/strings.dart';
 

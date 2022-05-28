@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import '../../../data/models/course_model.dart';
+import 'package:odc_app/data/models/courses_model.dart';
 import '../../consts/colors.dart';
 import '../../consts/routes.dart';
 import '../main_widgets/my_text.dart';
@@ -11,7 +11,7 @@ class MyCourseCard extends StatelessWidget {
     Key? key,
     required this.course,
   }) : super(key: key);
-  final CourseModel course;
+  final CoursesModel course;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

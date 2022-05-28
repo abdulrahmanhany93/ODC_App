@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/consts/cubites.dart';
+import '../../consts/cubites.dart';
 import '../../consts/fixed_variables.dart';
 import '../../widgets/navigation_center_bar.dart';
 
@@ -14,8 +14,6 @@ class _NavigationCenterState extends State<NavigationCenter> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    usercontrollerCubit.fetchUserData();
-
     return Scaffold(
       body: AnimatedSwitcher(
           duration: FixedVariables.myDuration,

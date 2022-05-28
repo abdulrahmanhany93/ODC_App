@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+
 import '../consts/colors.dart';
 import '../consts/fixed_variables.dart';
 import '../consts/methods.dart';
-import 'package:sizer/sizer.dart';
 
 class NaviagtionCenterBar extends StatelessWidget {
   const NaviagtionCenterBar({Key? key, required this.currentIndex, this.onTap})

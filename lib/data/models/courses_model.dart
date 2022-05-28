@@ -1,26 +1,26 @@
 import 'dart:convert';
 
-import 'category_model.dart';
+import 'package:odc_app/data/models/category_model.dart';
 
-class CourseModel {
+class CoursesModel {
   final int id;
   final String name;
   final String image;
   final CategoryModel category;
-  CourseModel({
+  CoursesModel({
     required this.id,
     required this.name,
     required this.image,
     required this.category,
   });
 
-  CourseModel copyWith({
+  CoursesModel copyWith({
     int? id,
     String? name,
     String? image,
     CategoryModel? category,
   }) {
-    return CourseModel(
+    return CoursesModel(
       id: id ?? this.id,
       name: name ?? this.name,
       image: image ?? this.image,
@@ -37,8 +37,8 @@ class CourseModel {
     };
   }
 
-  factory CourseModel.fromMap(Map<String, dynamic> map) {
-    return CourseModel(
+  factory CoursesModel.fromMap(Map<String, dynamic> map) {
+    return CoursesModel(
       id: map['id']?.toInt() ?? 0,
       name: map['course_name'] ?? '',
       image: map['image_url'] ?? '',
@@ -48,8 +48,8 @@ class CourseModel {
 
   String toJson() => json.encode(toMap());
 
-  factory CourseModel.fromJson(String source) =>
-      CourseModel.fromMap(json.decode(source));
+  factory CoursesModel.fromJson(String source) =>
+      CoursesModel.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -60,7 +60,7 @@ class CourseModel {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is CourseModel &&
+    return other is CoursesModel &&
         other.id == id &&
         other.name == name &&
         other.image == image &&

@@ -1,5 +1,5 @@
-import 'package:odc_app/data/repositories/user_repository.dart';
-import 'package:odc_app/data/web_services/user_web_services.dart';
+import 'user_repository.dart';
+import '../web_services/user_web_services.dart';
 
 import 'categories_repository.dart';
 import 'courses_repository.dart';

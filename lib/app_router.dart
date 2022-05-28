@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:odc_app/data/models/course_Model.dart';
-import 'data/models/args_model.dart';
-import 'data/models/category_model.dart';
+import 'package:odc_app/data/models/category_model.dart';
+import 'package:odc_app/data/models/courses_model.dart';
 
+import 'data/models/args_model.dart';
 import 'helpers/transitions/fade_transition.dart';
 import 'presentation/consts/cubites.dart';
 import 'presentation/consts/routes.dart';
@@ -55,8 +55,8 @@ class AppRouter {
                 ));
       case signUpPage:
         return MaterialPageRoute(
-            builder: (__) => BlocProvider(
-                  create: (context) => authCubit,
+            builder: (__) => BlocProvider.value(
+                  value: authCubit,
                   child: const SignUpPage(),
                 ));
       case navigationCenter:
@@ -87,7 +87,7 @@ class AppRouter {
       case courseDetailsPage:
         return MaterialPageRoute(
             builder: (__) => CourseDetailsPage(
-                  course: settings.arguments as CourseModel,
+                  course: settings.arguments as CoursesModel,
                 ));
       case courseExamPage:
         return MaterialPageRoute(

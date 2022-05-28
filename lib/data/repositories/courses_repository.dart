@@ -1,17 +1,19 @@
-import '../models/course_model.dart';
+
+import 'package:odc_app/data/models/courses_model.dart';
+
 import '../web_services/courses_web_services.dart';
 
 class CoursesRepository {
   final CoursesWebServices coursesWebServices;
-  List<CourseModel> courses = [];
+  List<CoursesModel> courses = [];
   CoursesRepository({
     required this.coursesWebServices,
   });
-  Future<List<CourseModel>> getCategories() async {
+  Future<List<CoursesModel>> getCategories() async {
     final data = await coursesWebServices.getCourses();
     courses = [];
     for (var course in data['data']) {
-      courses.add(CourseModel.fromMap(course));
+      courses.add(CoursesModel.fromMap(course));
     }
     return courses;
   }

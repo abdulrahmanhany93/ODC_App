@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import '../main_widgets/my_text.dart';
 import '../../../data/models/category_model.dart';
 import '../../consts/routes.dart';
 import 'package:sizer/sizer.dart';

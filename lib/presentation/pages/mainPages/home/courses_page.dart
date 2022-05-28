@@ -2,10 +2,10 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/consts/colors.dart';
-import 'package:odc_app/presentation/consts/cubites.dart';
-import 'package:odc_app/presentation/consts/methods.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import '../../../consts/colors.dart';
+import '../../../consts/cubites.dart';
+import '../../../consts/methods.dart';
+import '../../../widgets/main_widgets/my_text.dart';
 import 'package:sizer/sizer.dart';
 
 class CoursesPage extends StatelessWidget {

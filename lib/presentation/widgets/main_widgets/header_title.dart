@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'my_text.dart';
 import 'package:sizer/sizer.dart';
+
+import 'my_text.dart';
 
 class HeaderTitle extends StatelessWidget {
   const HeaderTitle({

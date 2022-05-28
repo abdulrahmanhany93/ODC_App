@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/answer_card.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_button.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
-import 'package:odc_app/presentation/widgets/main_widgets/timer_widget.dart';
+import '../../../widgets/main_widgets/answer_card.dart';
+import '../../../widgets/main_widgets/my_button.dart';
+import '../../../widgets/main_widgets/my_text.dart';
+import '../../../widgets/main_widgets/timer_widget.dart';
 import '../../../../data/models/args_model.dart';
 import '../../../../data/models/exam_model.dart';
 import '../../../consts/colors.dart';

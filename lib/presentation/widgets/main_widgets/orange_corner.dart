@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../consts/colors.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../consts/colors.dart';
 
 class OrangeCorner extends StatelessWidget {
   const OrangeCorner({

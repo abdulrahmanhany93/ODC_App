@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'package:odc_app/data/models/courses_model.dart';
 import '../../data/models/category_model.dart';
-import '../../data/models/course_model.dart';
 import '../../data/repositories/categories_repository.dart';
 import '../../data/repositories/courses_repository.dart';
 
@@ -11,7 +11,7 @@ class AppdataCubit extends Cubit<AppdataState> {
   AppdataCubit(this.categoriesRepository, this.coursesRepository)
       : super(AppdataInitial());
   List<CategoryModel> categories = [];
-  List<CourseModel> courses = [];
+  List<CoursesModel> courses = [];
   final CategoriesRepository categoriesRepository;
   final CoursesRepository coursesRepository;
   void fetchData() async {

@@ -1,12 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:odc_app/data/models/category_model.dart';
-import 'package:odc_app/presentation/consts/colors.dart';
-import 'package:odc_app/presentation/consts/cubites.dart';
-import 'package:odc_app/presentation/consts/methods.dart';
-import 'package:odc_app/presentation/consts/strings.dart';
+import '../../../../data/models/category_model.dart';
+import '../../../consts/colors.dart';
+import '../../../consts/cubites.dart';
+import '../../../consts/methods.dart';
+import '../../../consts/strings.dart';
 
-import 'package:odc_app/presentation/widgets/main_widgets/my_text.dart';
+import '../../../widgets/main_widgets/my_text.dart';
 
 
 import 'package:sizer/sizer.dart';
